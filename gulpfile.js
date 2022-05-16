@@ -17,7 +17,7 @@ gulp.task("sass", function(){
   .pipe(sass({outputStyle: 'expanded'}))
   .pipe(prefix("last 2 versions"))
   .pipe(gulp.dest('assets/css'))
-  .pipe(notify({message: "SASS tarea finalizada 💯"}))
+  //.pipe(notify({message: "SASS tarea finalizada 💯"}))
 });
 
 
