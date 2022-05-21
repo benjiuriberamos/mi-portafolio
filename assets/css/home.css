@@ -14,6 +14,20 @@ section {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  color: #9eff9e;
+}
+a:active {
+  color: #ffffff;
+}
+a:visited {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 426px) {
   .header {
     height: 90px;
@@ -183,7 +197,64 @@ section {
     text-align: center;
   }
 }
+@media screen and (min-width: 426px) {
+  .b2 {
+    background-color: #ffffff;
+  }
+
+  .b2__title {
+    position: relative;
+    width: 60%;
+    margin: 50px auto 10px auto;
+    text-align: center;
+  }
+
+  .b2__content {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .b2__item {
+    width: 90%;
+    margin: 20px auto 0 auto;
+    background-color: #000000;
+    padding: 30px 0;
+    color: #ffffff;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 426px) {
+  .b3 {
+    background-color: #ffffff;
+    justify-content: center;
+  }
+
+  .b3__title {
+    position: relative;
+    width: 60%;
+    margin: 50px auto 10px auto;
+    text-align: center;
+  }
+
+  .b3__content {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .b3__item {
+    width: 90%;
+    margin: 20px auto 0 auto;
+    background-color: #000000;
+    padding: 30px 0;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 426px) {
   .b3 {
     background-color: #ffffff;
     justify-content: center;
