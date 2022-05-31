@@ -1,33 +1,18 @@
 {
-  "name": "mi-portafolio",
-  "version": "1.0.0",
-  "description": "Proyecto personal para describir mis habilidades como programador",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "browser-sync": "^2.27.10",
-    "es5-ext": "^0.10.61",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-serve": "^1.4.0",
-    "gulp-refresh": "^1.1.0",
-    "sass": "^1.51.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/benjiuriberamos/mi-portafolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/benjiuriberamos/mi-portafolio/issues"
-  },
-  "homepage": "https://github.com/benjiuriberamos/mi-portafolio#readme"
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14"
+    }
 }
