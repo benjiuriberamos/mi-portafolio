@@ -42,15 +42,18 @@
         <div class="b2__content">
             <div class="b2__item">
             PHP (Laravel, symfony, codeigneiter)
+            <a href="{{ route('symfony') }}">Ver proyectos</a>
             </div>
             <div class="b2__item">
             SQL (MySql)
+            <a href="{{ route('symfony') }}">Ver proyectos</a>
             </div>
             <div class="b2__item">
             Git (GitHub, Bitbucket)
             </div>
             <div class="b2__item">
             JavaScript (Node.js, Jquery, Angular)
+            <a href="{{ route('symfony') }}">Ver proyectos</a>
             </div>
         </div>
     </section>
@@ -70,6 +73,23 @@
             
             <a href="https://wa.link/ycsebk" target="_blank">Whatsapp</a>
             </div>
+        </div>
+    </section>
+    <section class="b4">
+        <div class="b4__form-container">
+            <form class="b4__form">
+                <div class="b4__input">
+                    <input type="text" name="nombre" placeholder="Nombre/Empresa">
+                </div>
+                <div class="b4__input">
+                    <input type="text" name="asunto" placeholder="Asunto">
+                </div>
+                <div class="b4__input">
+                    <textarea name="mensaje" rows="5">Mensaje</textarea>
+                <div class="b4__input">
+                    <button>Enviar</button>
+                </div>
+            </form>
         </div>
     </section>
     <footer class="footer">
