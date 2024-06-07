@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SkillsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +18,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/symfony', [SkillsController::class, 'symfony'])->name('symfony');
-Route::get('/laravel', [SkillsController::class, 'laravel'])->name('laravel');
-Route::get('/node', [SkillsController::class, 'node'])->name('node');

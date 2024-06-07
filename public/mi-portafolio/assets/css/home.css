@@ -301,10 +301,33 @@ a:visited {
   }
 
   .b4__input {
-    padding: 5px 10px
+    padding: 5px 10px;
   }
 
-  .b4__input > input, textarea {
+  .b4__title {
+    text-align: center;
+  }
+
+  .input_class {
     width: 90%;
+    height: 30px;
+    margin: 5px;
+    padding: 0 10px;
+    border: 1px solid #4CAF50;
   } 
-}
+
+  .input_class:active {
+    border: 1px solid #4CAF50;
+  }
+
+  .input_class:focus-visible {
+    border: 1px solid #4CAF50;
+  }
+
+  .b4__input > textarea {
+    width: 90%;
+    margin: 5px;
+    padding: 0 10px;
+    border: 1px solid #4CAF50;
+  } 
+} 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SkillsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/symfony', [SkillsController::class, 'symfony'])->name('symfony');
+Route::get('/laravel', [SkillsController::class, 'laravel'])->name('laravel');
+Route::get('/node', [SkillsController::class, 'node'])->name('node');

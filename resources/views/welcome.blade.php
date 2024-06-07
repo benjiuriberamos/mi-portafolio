@@ -76,18 +76,20 @@
         </div>
     </section>
     <section class="b4">
+        
         <div class="b4__form-container">
-            <form class="b4__form">
+            <h3 class="b4__title">Envíame un mensaje:</h3>
+            <form class="b4__form" id="formulario">
                 <div class="b4__input">
-                    <input type="text" name="nombre" placeholder="Nombre/Empresa">
+                    <input type="text" class="input_class" name="nombre" id="nombre" placeholder="Nombre/Empresa">
                 </div>
                 <div class="b4__input">
-                    <input type="text" name="asunto" placeholder="Asunto">
+                    <input type="text" class="input_class"name="asunto" id="asunto" placeholder="Asunto">
                 </div>
                 <div class="b4__input">
-                    <textarea name="mensaje" rows="5">Mensaje</textarea>
+                    <textarea name="mensaje" class="textarea_class" id="mensaje" rows="5">Mensaje</textarea>
                 <div class="b4__input">
-                    <button>Enviar</button>
+                    <button id="btnenviar">Enviar</button>
                 </div>
             </form>
         </div>
@@ -97,5 +99,48 @@
             <img src="{{ asset('mi-portafolio/assets/img/mylogo.png') }}" alt="Logo" class="f__logo">
         </div>
     </footer>
+    <script>
+        
+
+        function isMobile() {
+            if (sessionStorage.desktop)
+                return false;
+            else if (localStorage.mobile)
+                return true;
+            var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
+            for (var i in mobile)
+                if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+            return false;
+        }
+
+        const formulario = document.querySelector('#formulario');
+        const buttonSubmit = document.querySelector('#btnenviar');
+        const urlDesktop = 'https://web.whatsapp.com/';
+        const urlMobile = 'whatsapp://';
+        const telefono = '+51954775880';
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault()
+            buttonSubmit.innerHTML = 'REDIRIGIENDO A WHATSAPP';
+            buttonSubmit.disabled = true
+            setTimeout(() => {
+                let nombre = document.querySelector('#nombre').value
+                let asunto = document.querySelector('#asunto').value
+                let mensaje = document.querySelector('#mensaje').value
+                let mensajewts = `send?phone=${telefono}&text=*_Formulario de BENJADEV_*%0A` +
+                    `*¿Cón quién tengo el gusto?*%0A${nombre}%0A` +
+                    `*¿Cuál es el asunto a tratar?*%0A${asunto}%0A` +
+                    `*¿Cuál es  tu mensaje?*%0A${mensaje}`;
+                if(isMobile()) {
+                    window.open(urlMobile + mensajewts, '_blank')
+                }else{
+                    window.open(urlDesktop + mensajewts, '_blank')
+                }
+                // buttonSubmit.innerHTML = '<i class="fab fa-whatsapp"></i> Enviar'
+                buttonSubmit.disabled = false
+                buttonSubmit.innerHTML = 'ENVIAR DATOS!'
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
