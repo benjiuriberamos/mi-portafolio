@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('mi-portafolio/assets/css/home.css') }}">
     <title>Benji Uribe Ramos</title>
+
+    <!-- Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4262096324136426"
+     crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -41,19 +45,19 @@
         <h2 class="b2__title">Mis habilidades</h2>
         <div class="b2__content">
             <div class="b2__item">
-            PHP (Laravel, symfony, codeigneiter)
-            <a href="{{ route('symfony') }}">Ver proyectos</a>
+                PHP (Laravel, symfony, codeigneiter)<br>
+                <a href="{{ route('symfony') }}" class="b2__item-link">Ver proyectos</a>
             </div>
             <div class="b2__item">
-            SQL (MySql)
-            <a href="{{ route('symfony') }}">Ver proyectos</a>
+                SQL (MySql)<br>
+                <a href="{{ route('symfony') }}" class="b2__item-link">Ver proyectos</a>
             </div>
             <div class="b2__item">
-            Git (GitHub, Bitbucket)
+                Git (GitHub, Bitbucket)
             </div>
             <div class="b2__item">
-            JavaScript (Node.js, Jquery, Angular)
-            <a href="{{ route('symfony') }}">Ver proyectos</a>
+                JavaScript (Node.js, Jquery, Angular)<br>
+                <a href="{{ route('symfony') }}" class="b2__item-link">Ver proyectos</a>
             </div>
         </div>
     </section>
@@ -64,7 +68,7 @@
             <a href="mailto:benjiuriberamos@gmail.com" target="_blank" rel="noopener noreferrer">benjiuriberamos @gmail.com</a>
             </div>
             <div class="b3__item">
-            <a href="tel:+51 954 775 880">+51 954 775 880</a>
+            <a href="tel:+51954775880">+51 954775880</a>
             </div>
             <div class="b3__item">
             <a href="https://www.linkedin.com/in/benji-uribe-90b340234/" target="_blank">Linkedin</a>

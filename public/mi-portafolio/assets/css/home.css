@@ -25,10 +25,10 @@ a:hover {
   color: #9eff9e;
 }
 a:active {
-  color: #ffffff;
+  color: #9eff9e;
 }
 a:visited {
-  color: #ffffff;
+  color: #9eff9e;
 }
 
 @media screen and (max-width: 426px) {
@@ -199,6 +199,11 @@ a:visited {
     color: #ffffff;
     text-align: center;
   }
+
+  .b2__item-link {
+    color: #4CAF50;
+  }
+
 }
 @media screen and (min-width: 426px) {
   .b2 {
@@ -226,6 +231,10 @@ a:visited {
     padding: 30px 0;
     color: #ffffff;
     text-align: center;
+  }
+
+  .b2__item-link {
+    color: #4CAF50;
   }
 }
 @media screen and (max-width: 426px) {
