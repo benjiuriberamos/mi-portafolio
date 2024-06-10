@@ -8,7 +8,7 @@
     <meta name="description" content="Portafolio de Benji Uribe Ramos">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('mi-portafolio/assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
     <title>Benji Uribe Ramos</title>
 
     <!-- Adsense -->
@@ -19,14 +19,14 @@
 <body>
     <header class="header">
         <div class="header__wancho">
-            <img src="{{ asset('mi-portafolio/assets/img/mylogo.png') }}" alt="Logo" class="h__logo">
+            <img src="{{ asset('assets/img/mylogo.png') }}" alt="Logo" class="h__logo">
         </div>
     </header>
 
     <section class="b1">
         <div class="b1__card">
             <div class="b1__cardleft">
-                <img class="b1__cardleft-img" src="{{ asset('mi-portafolio/assets/img/yo.png') }}" alt="">
+                <img class="b1__cardleft-img" src="{{ asset('assets/img/yo.png') }}" alt="">
             </div>
             <div class="b1__cardrigth">
                 <h1 class="b1__cardrigth-title">
@@ -100,11 +100,22 @@
     </section>
     <footer class="footer">
         <div class="footer__wancho">
-            <img src="{{ asset('mi-portafolio/assets/img/mylogo.png') }}" alt="Logo" class="f__logo">
+            <img src="{{ asset('assets/img/mylogo.png') }}" alt="Logo" class="f__logo">
         </div>
     </footer>
     <script>
+        const bodycolor = [
+            '#F2D7D5',
+            '#FDEDEC',
+            '#BCAAA4',
+            '#FFF59D',
+            '#FFAB91',
+        ]
         
+        var indexcolor = parseInt(Math.random() * (5));
+        console.log(indexcolor)
+        document.querySelector('body').style.background = bodycolor[indexcolor];
+
 
         function isMobile() {
             if (sessionStorage.desktop)

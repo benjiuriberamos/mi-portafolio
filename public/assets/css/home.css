@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-  font-family: "Roboto", sans-serif;
 }
 
 section {
@@ -25,10 +22,24 @@ a:hover {
   color: #9eff9e;
 }
 a:active {
-  color: #9eff9e;
+  color: #ffffff;
 }
 a:visited {
-  color: #9eff9e;
+  color: #ffffff;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+button {
+  background-color: black;
+  min-width: 90px;
+  color: white;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 426px) {
@@ -37,11 +48,9 @@ a:visited {
     justify-content: center;
     border-bottom: 2px solid #000000;
   }
-
   .header__wancho {
     width: 20%;
   }
-
   .h__logo {
     position: relative;
     width: 100%;
@@ -53,7 +62,6 @@ a:visited {
     justify-content: center;
     border-bottom: 2px solid #000000;
   }
-
   .header__wancho {
     width: 100%;
     height: 100%;
@@ -61,7 +69,6 @@ a:visited {
     margin: 0 auto;
     position: relative;
   }
-
   .h__logo {
     position: relative;
     height: 100%;
@@ -74,12 +81,10 @@ a:visited {
     justify-content: center;
     border-top: 2px solid #000000;
   }
-
   .footer__wancho {
     width: 20%;
     position: relative;
   }
-
   .f__logo {
     position: relative;
     width: 100%;
@@ -92,7 +97,6 @@ a:visited {
     justify-content: center;
     border-top: 2px solid #000000;
   }
-
   .footer__wancho {
     width: 100%;
     height: 100%;
@@ -100,7 +104,6 @@ a:visited {
     max-width: 1024px;
     margin: 0 auto;
   }
-
   .f__logo {
     position: relative;
     height: 100%;
@@ -113,22 +116,18 @@ a:visited {
     margin: 0 auto;
     align-items: center;
   }
-
   .b1__cardleft {
     width: 40%;
   }
-
   .b1__cardleft-img {
     width: 100%;
   }
-
   .b1__cardrigth-title {
     background-color: #000000;
     width: 60%;
     font-size: 20px;
     color: #ffffff;
   }
-
   .b1__cardrigth {
     background-color: #000000;
     width: 60%;
@@ -146,22 +145,18 @@ a:visited {
     margin: 0 auto;
     align-items: center;
   }
-
   .b1__cardleft {
     width: 40%;
   }
-
   .b1__cardleft-img {
     width: 100%;
   }
-
   .b1__cardrigth-title {
     background-color: #000000;
     width: 60%;
     font-size: 20px;
     color: #ffffff;
   }
-
   .b1__cardrigth {
     background-color: #000000;
     width: 60%;
@@ -176,21 +171,18 @@ a:visited {
   .b2 {
     background-color: #ffffff;
   }
-
   .b2__title {
     position: relative;
     width: 60%;
     margin: 50px auto 10px auto;
     text-align: center;
   }
-
   .b2__content {
     margin: 0 auto;
     width: 90%;
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
   .b2__item {
     width: 90%;
     margin: 20px auto 0 auto;
@@ -199,31 +191,23 @@ a:visited {
     color: #ffffff;
     text-align: center;
   }
-
-  .b2__item-link {
-    color: #4CAF50;
-  }
-
 }
 @media screen and (min-width: 426px) {
   .b2 {
     background-color: #ffffff;
   }
-
   .b2__title {
     position: relative;
     width: 60%;
     margin: 50px auto 10px auto;
     text-align: center;
   }
-
   .b2__content {
     margin: 0 auto;
     width: 90%;
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
   .b2__item {
     width: 90%;
     margin: 20px auto 0 auto;
@@ -231,10 +215,6 @@ a:visited {
     padding: 30px 0;
     color: #ffffff;
     text-align: center;
-  }
-
-  .b2__item-link {
-    color: #4CAF50;
   }
 }
 @media screen and (max-width: 426px) {
@@ -242,21 +222,18 @@ a:visited {
     background-color: #ffffff;
     justify-content: center;
   }
-
   .b3__title {
     position: relative;
     width: 60%;
     margin: 50px auto 10px auto;
     text-align: center;
   }
-
   .b3__content {
     margin: 0 auto;
     width: 90%;
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
   .b3__item {
     width: 90%;
     margin: 20px auto 0 auto;
@@ -271,21 +248,18 @@ a:visited {
     background-color: #ffffff;
     justify-content: center;
   }
-
   .b3__title {
     position: relative;
     width: 60%;
     margin: 50px auto 10px auto;
     text-align: center;
   }
-
   .b3__content {
     margin: 0 auto;
     width: 90%;
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
   .b3__item {
     width: 90%;
     margin: 20px auto 0 auto;
@@ -295,48 +269,14 @@ a:visited {
     text-align: center;
   }
 }
+.b4__input {
+  justify-content: center;
+  text-align: center;
+}
 
 @media screen and (min-width: 426px) {
-  .b4 {
-    background-color: #ffffff;
-  }
-
-  .b4__form-container {
-    margin: 0 auto;
-  }
-
-  .b4__form {
-    text-align: center;
-  }
-
   .b4__input {
-    padding: 5px 10px;
-  }
-
-  .b4__title {
+    justify-content: center;
     text-align: center;
   }
-
-  .input_class {
-    width: 90%;
-    height: 30px;
-    margin: 5px;
-    padding: 0 10px;
-    border: 1px solid #4CAF50;
-  } 
-
-  .input_class:active {
-    border: 1px solid #4CAF50;
-  }
-
-  .input_class:focus-visible {
-    border: 1px solid #4CAF50;
-  }
-
-  .b4__input > textarea {
-    width: 90%;
-    margin: 5px;
-    padding: 0 10px;
-    border: 1px solid #4CAF50;
-  } 
-} 
+}
