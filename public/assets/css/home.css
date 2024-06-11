@@ -16,16 +16,6 @@ section {
 
 a {
   text-decoration: none;
-  color: #ffffff;
-}
-a:hover {
-  color: #9eff9e;
-}
-a:active {
-  color: #ffffff;
-}
-a:visited {
-  color: #ffffff;
 }
 
 input, textarea, select {
@@ -42,6 +32,35 @@ button {
   border-radius: 10px;
 }
 
+.header__wancho {
+  display: flex;
+}
+
+.header_items {
+  display: flex;
+  align-items: center;
+  right: 0;
+  justify-content: end;
+  width: 80%;
+}
+
+.header_list {
+  display: flex;
+  list-style: none;
+}
+
+.header_item {
+  padding: 15px;
+}
+
+.header_link {
+  text-decoration: none;
+  color: #000000;
+}
+.header_link:hover {
+  color: #9eff9e;
+}
+
 @media screen and (max-width: 426px) {
   .header {
     height: 90px;
@@ -49,11 +68,11 @@ button {
     border-bottom: 2px solid #000000;
   }
   .header__wancho {
-    width: 20%;
+    width: 100%;
   }
   .h__logo {
     position: relative;
-    width: 100%;
+    width: 20%;
   }
 }
 @media screen and (min-width: 426px) {
@@ -71,7 +90,7 @@ button {
   }
   .h__logo {
     position: relative;
-    height: 100%;
+    width: 20%;
   }
 }
 @media screen and (max-width: 426px) {

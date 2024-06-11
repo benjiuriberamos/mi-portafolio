@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
     <title>Benji Uribe Ramos</title>
 
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4262096324136426"
      crossorigin="anonymous"></script>
@@ -19,7 +21,22 @@
 <body>
     <header class="header">
         <div class="header__wancho">
-            <img src="{{ asset('assets/img/mylogo.png') }}" alt="Logo" class="h__logo">
+            <div class="h__logo">
+                <img src="{{ asset('assets/img/mylogo.png') }}" alt="Logo" height="90">
+            </div>
+            <div class="header_items">
+                <ul class="header_list">
+                    <li class="header_item">
+                        <a href="{{ route('symfony') }}" class="header_link">Symfony</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="{{ route('laravel') }}" class="header_link">Laravel</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="{{ route('node') }}" class="header_link">Javascript</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -45,18 +62,19 @@
         <h2 class="b2__title">Mis habilidades</h2>
         <div class="b2__content">
             <div class="b2__item">
-                PHP (Laravel, symfony, codeigneiter)<br>
+                <i class="fa-brands fa-php"></i> PHP<br> (Laravel, symfony, codeigneiter)<br>
                 <a href="{{ route('symfony') }}" class="b2__item-link">Ver proyectos</a>
             </div>
             <div class="b2__item">
-                SQL (MySql)<br>
+                <i class="fa-solid fa-database"></i> SQL<br>(MySql, SqlServer)<br>
                 <a href="{{ route('symfony') }}" class="b2__item-link">Ver proyectos</a>
             </div>
             <div class="b2__item">
-                Git (GitHub, Bitbucket)
+                <i class="fa-brands fa-git"></i> Git <br>
+                (GitHub, Bitbucket)
             </div>
             <div class="b2__item">
-                JavaScript (Node.js, Jquery, Angular)<br>
+                <i class="fa-brands fa-js"></i> JavaScript <br>(Node.js, Jquery, Angular)<br>
                 <a href="{{ route('symfony') }}" class="b2__item-link">Ver proyectos</a>
             </div>
         </div>
@@ -65,17 +83,20 @@
         <h2 class="b3__title">Datos de contacto</h2>
         <div class="b3__content">
             <div class="b3__item">
-            <a href="mailto:benjiuriberamos@gmail.com" target="_blank" rel="noopener noreferrer">benjiuriberamos @gmail.com</a>
+                <i class="fa-regular fa-envelope"></i>
+                <a href="mailto:benjiuriberamos@gmail.com" target="_blank" rel="noopener noreferrer">benjiuriberamos @gmail.com</a>
             </div>
             <div class="b3__item">
-            <a href="tel:+51954775880">+51 954775880</a>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+51954775880">+51 954775880</a>
             </div>
             <div class="b3__item">
-            <a href="https://www.linkedin.com/in/benji-uribe-90b340234/" target="_blank">Linkedin</a>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/benji-uribe-90b340234/" target="_blank">Linkedin</a>
             </div>
             <div class="b3__item">
-            
-            <a href="https://wa.link/ycsebk" target="_blank">Whatsapp</a>
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.link/ycsebk" target="_blank">Whatsapp</a>
             </div>
         </div>
     </section>
@@ -112,8 +133,7 @@
             '#FFAB91',
         ]
         
-        var indexcolor = parseInt(Math.random() * (5));
-        console.log(indexcolor)
+        var indexcolor = parseInt(Math.random() * (bodycolor.length));
         document.querySelector('body').style.background = bodycolor[indexcolor];
 
 
