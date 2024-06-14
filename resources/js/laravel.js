@@ -12,8 +12,7 @@ class Auto {
     heightParentElement = this.element.parentNode.offsetHeight;
     moveX = 1;
     moveY = 1;
-    // intervalTimeX: 10,
-    // intervalTimeY: 10,
+    codeProcess;
     desplazarX = () => {
         if (this.statusAutoX) {
             this.positionX += this.moveX;
@@ -49,13 +48,28 @@ class Auto {
             this.statusAutoY = true;
         }
     };
+    activar = () => {
+        this.codeProcess = setInterval(() => {
+            cajaAuto.desplazarX();
+            cajaAuto.desplazarY();
+        }, 20);
+    }
+    desactivar = () => {
+        clearInterval(this.codeProcess) 
+    };
 }
 
-let cajaAuto = new Auto();
+const cajaAuto = new Auto();
+cajaAuto.activar();
 
-setInterval(() => {
-    cajaAuto.desplazarX();
-    cajaAuto.desplazarY();
-}, 20);
+document.querySelector("#btn-stop").addEventListener("click", (e) => {
+    e.preventDefault();
+    cajaAuto.desactivar();
+});
 
+document.querySelector("#btn-start").addEventListener("click", (e) => {
+    e.preventDefault();
+    cajaAuto.activar();
+})  
 
+    

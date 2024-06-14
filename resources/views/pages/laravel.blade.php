@@ -14,14 +14,14 @@
         {{-- <div class="b5_auto" id="auto">
         </div> --}}
     </div>
-    <!--
     <div class="controls">
-        <button class="control-left">Left</button>
+        {{-- <button class="control-left">Left</button>
         <button class="control-rigth">Rigth</button>
         <button class="control-bottom">Bottom</button>
-        <button class="control-top">Top</button>
+        <button class="control-top">Top</button> --}}
+        <button class="control-bottom" id="btn-start">Start</button>
+        <button class="control-bottom" id="btn-stop">Stop</button>
     </div>
--->
 </section>
 
 <section class="b6">

@@ -19587,8 +19587,7 @@ var Auto = /*#__PURE__*/_createClass(function Auto() {
   _defineProperty(this, "heightParentElement", this.element.parentNode.offsetHeight);
   _defineProperty(this, "moveX", 1);
   _defineProperty(this, "moveY", 1);
-  // intervalTimeX: 10,
-  // intervalTimeY: 10,
+  _defineProperty(this, "codeProcess", void 0);
   _defineProperty(this, "desplazarX", function () {
     if (_this.statusAutoX) {
       _this.positionX += _this.moveX;
@@ -19620,12 +19619,26 @@ var Auto = /*#__PURE__*/_createClass(function Auto() {
       _this.statusAutoY = true;
     }
   });
+  _defineProperty(this, "activar", function () {
+    _this.codeProcess = setInterval(function () {
+      cajaAuto.desplazarX();
+      cajaAuto.desplazarY();
+    }, 20);
+  });
+  _defineProperty(this, "desactivar", function () {
+    clearInterval(_this.codeProcess);
+  });
 });
 var cajaAuto = new Auto();
-setInterval(function () {
-  cajaAuto.desplazarX();
-  cajaAuto.desplazarY();
-}, 20);
+cajaAuto.activar();
+document.querySelector("#btn-stop").addEventListener("click", function (e) {
+  e.preventDefault();
+  cajaAuto.desactivar();
+});
+document.querySelector("#btn-start").addEventListener("click", function (e) {
+  e.preventDefault();
+  cajaAuto.activar();
+});
 })();
 
 /******/ })()
