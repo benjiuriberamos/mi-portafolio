@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  max-width: 1024px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+button {
+  background-color: black;
+  min-width: 90px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header__wancho {
+  display: flex;
+}
+
+.header_items {
+  display: flex;
+  align-items: center;
+  right: 0;
+  justify-content: end;
+  width: 80%;
+}
+
+.header_list {
+  display: flex;
+  list-style: none;
+}
+
+.header_item {
+  padding: 15px;
+}
+
+.header_link {
+  text-decoration: none;
+  color: #000000;
+}
+.header_link:hover {
+  color: #9eff9e;
+}
+
+@media screen and (max-width: 426px) {
+  .header {
+    height: 90px;
+    justify-content: center;
+    border-bottom: 2px solid #000000;
+  }
+  .header__wancho {
+    width: 100%;
+  }
+  .h__logo {
+    position: relative;
+    width: 20%;
+  }
+  .header_item {
+    padding: 5px;
+  }
+}
+@media screen and (min-width: 426px) {
+  .header {
+    height: 90px;
+    justify-content: center;
+    border-bottom: 2px solid #000000;
+  }
+  .header__wancho {
+    width: 100%;
+    height: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .h__logo {
+    position: relative;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .footer {
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    border-top: 2px solid #000000;
+  }
+  .footer__wancho {
+    width: 20%;
+    position: relative;
+  }
+  .f__logo {
+    position: relative;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 426px) {
+  .footer {
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    border-top: 2px solid #000000;
+  }
+  .footer__wancho {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .f__logo {
+    position: relative;
+    height: 100%;
+  }
+}
+.b5 {
+  background-color: #fff;
+}
+
+.b5_autopista {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  position: relative;
+  border: solid 1px;
+}
+
+.b5_auto {
+  background-color: #000000;
+  width: 225px;
+  text-align: center;
+  font-size: 50px;
+  height: 55px;
+  color: white;
+  margin: 0px 15px 0px 0px;
+  position: relative;
+}
+.b5_auto:hover {
+  background-color: brown;
+}
+
+.controls {
+  text-align: center;
+}

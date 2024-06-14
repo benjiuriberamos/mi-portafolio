@@ -4,6 +4,10 @@
   box-sizing: content-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 section {
   width: 100%;
   max-width: 1024px;
@@ -12,10 +16,6 @@ section {
   margin: 0 auto;
   justify-content: center;
   position: relative;
-}
-
-a {
-  text-decoration: none;
 }
 
 input, textarea, select {
@@ -30,6 +30,7 @@ button {
   min-width: 90px;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .header__wancho {
@@ -73,6 +74,9 @@ button {
   .h__logo {
     position: relative;
     width: 20%;
+  }
+  .header_item {
+    padding: 5px;
   }
 }
 @media screen and (min-width: 426px) {

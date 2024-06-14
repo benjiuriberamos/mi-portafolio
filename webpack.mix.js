@@ -12,10 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/laravel.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ])
     .sass('public/assets/sass/home.sass', 'assets/css')
+    .sass('public/assets/sass/laravel.sass', 'assets/css')
     .browserSync({
         proxy: 'http://127.0.0.1:8000', // Cambia esto por la URL de tu servidor de desarrollo
         files: [
@@ -29,23 +31,4 @@ mix.js('resources/js/app.js', 'public/js')
     })
     ;
 
-// Añadir configuración de BrowserSync
-// mix.webpackConfig({
-//     plugins: [
-//         new BrowserSyncPlugin({
-//             proxy: 'http://localhost:8000', // URL de tu servidor de desarrollo
-//             files: [
-//                 'app/**/*.php',
-//                 'resources/views/**/*.php',
-//                 'resources/js/**/*.js',
-//                 'resources/sass/**/*.scss',
-//                 'public/js/**/*.js',
-//                 'public/css/**/*.css',
-//                 'public/assets/css/**/*.sass'
-//             ],
-//             open: false,
-//             notify: false
-//         })
-//     ]
-// });
 

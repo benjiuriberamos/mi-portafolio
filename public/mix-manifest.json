@@ -1,5 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/laravel.js": "/js/laravel.js",
     "/css/app.css": "/css/app.css",
+    "/assets/css/laravel.css": "/assets/css/laravel.css",
     "/assets/css/home.css": "/assets/css/home.css"
 }

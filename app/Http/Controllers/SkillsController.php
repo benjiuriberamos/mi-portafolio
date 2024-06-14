@@ -15,14 +15,14 @@ class SkillsController extends Controller
      */
     public function laravel() {
 
-        return view('skills.laravel', []);
+        return view('pages.laravel', []);
     }
 
     public function symfony() {
-        return view('skills.symfony', []);
+        return view('pages.symfony', []);
     }
 
     public function node() {
-        return view('skills.node', []);
+        return view('pages.node', []);
     }
 }
