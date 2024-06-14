@@ -1,4 +1,4 @@
-require('./bootstrap');
+// require('./bootstrap');
 
 class Auto {
     positionX = 0;
@@ -49,13 +49,16 @@ class Auto {
         }
     };
     activar = () => {
-        this.codeProcess = setInterval(() => {
-            cajaAuto.desplazarX();
-            cajaAuto.desplazarY();
-        }, 20);
+        if (!this.codeProcess) {
+            this.codeProcess = setInterval(() => {
+                cajaAuto.desplazarX();
+                cajaAuto.desplazarY();
+            }, 20);
+        }
     }
     desactivar = () => {
         clearInterval(this.codeProcess) 
+        this.codeProcess = null;
     };
 }
 
