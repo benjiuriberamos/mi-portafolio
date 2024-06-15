@@ -25,7 +25,7 @@
 </section>
 
 <section class="b6">
-    <p>
+    {{-- <p>
         Hola estos son mis proyectos con laravel:
         <ul>
             <li>
@@ -39,7 +39,7 @@
             <li></li>
             <li></li>
         </ul>
-    </p>
+    </p> --}}
 </section>
 
 @endsection

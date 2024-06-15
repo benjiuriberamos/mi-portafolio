@@ -8,7 +8,7 @@
     <meta name="description" content="Portafolio de Benji Uribe Ramos">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
     <title>Benji Uribe Ramos</title>
 
     <!-- Iconos -->
