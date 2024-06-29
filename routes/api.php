@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +20,32 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/tokens/create', function (Request $request) {
-    $token = $request->user()->createToken($request->token_name);
-
-    return ['token' => $token->plainTextToken];
+Route::middleware(['auth:sanctum', 'ability:create-post'])->get('/post/create', function (Request $request) {
+    return [
+        "id" => 1,
+        "title" => $request->title,
+        "content" => $request->content,
+    ];
 });
+
+Route::post('/login', function (Request $request) {
+    $user = User::where('email', $request->input('email'))->first();
+    
+    if (!$user || !Hash::check($request->password, $user->password) ) {
+        return response()->json([
+            'message' =>'Credenciales incorrectas',
+
+        ], 401);
+    }
+
+    return response()->json([
+        'user' => [
+            'name' => $user->name,
+            'email' => $user->email,
+        ],
+        'token' => $user->createToken('api')->plainTextToken,
+    ]);
+});
+
+
+

@@ -1,7 +1,9 @@
 <header class="header">
     <div class="header__wancho">
         <div class="h__logo">
-            <img src="{{ asset('assets/img/mylogo.png') }}" alt="Logo" height="90">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('assets/img/mylogo.png') }}" alt="Logo" height="90">
+            </a>
         </div>
         <div class="header_items">
             <ul class="header_list">
