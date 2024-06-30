@@ -19,27 +19,27 @@
      crossorigin="anonymous"></script> --}}
     
 </head>
-<body>
+<body style="background-image: url('/assets/img/fondo.jpeg')">
     @include('template._header')
     
     @yield('content')
     @include('template._footer')
     
     <script>
-        const bodycolor = [
-            '#F2D7D5',
-            '#FDEDEC',
-            '#BCAAA4',
-            '#FFF59D',
-            '#FFAB91',
-        ]
+        // const bodycolor = [
+        //     '#F2D7D5',
+        //     '#FDEDEC',
+        //     '#BCAAA4',
+        //     '#FFF59D',
+        //     '#FFAB91',
+        // ]
 
-        const cambiarColor = (element) => {
-            let indexcolor = parseInt(Math.random() * (bodycolor.length));
-            document.querySelector(element).style.background = bodycolor[indexcolor];
+        // const cambiarColor = (element) => {
+        //     let indexcolor = parseInt(Math.random() * (bodycolor.length));
+        //     document.querySelector(element).style.background = bodycolor[indexcolor];
 
-        }
-        cambiarColor('body')
+        // }
+        // cambiarColor('body')
 
         function isMobile() {
             if (sessionStorage.desktop)
