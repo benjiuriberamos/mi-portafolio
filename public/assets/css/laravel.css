@@ -112,9 +112,9 @@ button {
 }
 
 .footer__wancho {
+  width: 100%;
   display: flex;
   max-width: 1024px;
-  width: 100%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -154,36 +154,27 @@ button {
 
 @media screen and (max-width: 426px) {
   .footer {
-    width: 100%;
     height: auto;
-    border-top: 2px solid #000000;
-    position: relative;
   }
   .footer__wancho {
-    width: 100%;
-    position: relative;
-    margin: 0 auto;
+    display: block;
   }
   .footer_items {
     justify-content: center;
     width: 100%;
+    padding: 20px 0 0 0;
   }
   .footer_list {
     display: block;
-    list-style: none;
-  }
-  .footer_item {
-    padding: 5px;
   }
   .footer_link {
-    padding-top: 20px;
     display: flex;
     justify-content: center;
   }
   .f__logo {
-    width: 20%;
     display: flex;
     margin: 20px auto;
+    padding: 0 0 15px;
   }
 }
 .b5_autopista {
