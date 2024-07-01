@@ -13,13 +13,10 @@
         </div>
         <div class="b1__cardrigth">
             <h1 class="b1__cardrigth-title">
-                DESARROLLADOR FULLSTACK
+                DESARROLLADOR BACKEND
             </h1>
             <div class="b1__cardrigth-text">
-                <p> Hola bienvenido a mi portafolio. <br>
-                Mi nombre es Benji Uribe Ramos y tengo experiencia en el mundo de la programación
-                actualmente me encuentro disponible a escuchar ofertas de empleo, estoy interesado en nuevos 
-                retos.</p>
+                <p> Hola, me llamo Benji Uribe Ramos</p>
             </div>
         </div>
     </div>

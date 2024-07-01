@@ -19,24 +19,11 @@
 
 .header_link
     text-decoration: none
-    color: $color01
+    color: $color02
     &:hover
         color: $color03
 
-
-@media screen and (max-width: 426px)
-    .header
-        height: 90px
-        justify-content: center
-        border-bottom: 2px solid $color01
-    .header__wancho
-        width: 100%
-    .h__logo
-        position: relative
-        width: 20%
-    .header_item
-        padding: 5px
-@media screen and (min-width: 426px)
+@media screen and (max-width: 1023px)
     .header
         height: 90px
         justify-content: center
@@ -50,3 +37,16 @@
     .h__logo
         position: relative
         width: 20%
+        
+@media screen and (max-width: 426px)
+    .header
+        height: 90px
+        justify-content: center
+        border-bottom: 2px solid $color01
+    .header__wancho
+        width: 100%
+    .h__logo
+        position: relative
+        width: 20%
+    .header_item
+        padding: 5px
