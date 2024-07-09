@@ -1,11 +1,14 @@
 <?php
 
-use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\CarsController;
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
 use App\Http\Controllers\SkillsController;
 use App\Services\Logistica\LogisticaService;
 use App\Services\Logistica\LogisticaMaritima;
 use App\Services\Logistica\LogisticaTerrestre;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Services\FabricaMuebles\Fabrica\FabricaMuebleArdeco;
 use App\Services\FabricaMuebles\Fabrica\FabricaMuebleModerno;
 use App\Services\FabricaMuebles\Fabrica\FabricaMuebleVictoriana;
@@ -22,8 +25,14 @@ use App\Services\FabricaMuebles\Fabrica\FabricaMuebleVictoriana;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+    // return view('pages.home');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
 
 Route::get('/symfony', [SkillsController::class, 'symfony'])->name('symfony');
 Route::get('/laravel', [SkillsController::class, 'laravel'])->name('laravel');
@@ -60,8 +69,15 @@ Route::get('/fabrica-muebles', function () {
     ]);
 });
 
+Route::get('/something', function () {
+    return Inertia::render('Pruebas/Something');
+})->name('something');
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    // return view('dashboard');
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource('cars', CarsController::class)->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
