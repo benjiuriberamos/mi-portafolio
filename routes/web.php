@@ -33,7 +33,7 @@ Route::get('/', function () {
     //     'laravelVersion' => Application::VERSION,
     //     'phpVersion' => PHP_VERSION,
     // ]);
-});
+})->name('home');
 
 Route::get('/symfony', [SkillsController::class, 'symfony'])->name('symfony');
 Route::get('/laravel', [SkillsController::class, 'laravel'])->name('laravel');
