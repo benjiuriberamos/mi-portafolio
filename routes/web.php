@@ -25,13 +25,14 @@ use App\Services\FabricaMuebles\Fabrica\FabricaMuebleVictoriana;
 */
 
 Route::get('/', function () {
-    // return view('pages.home');
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return view('pages.home');
+    // return view('portafolio');
+    // return Inertia::render('Welcome', [
+    //     'canLogin' => Route::has('login'),
+    //     'canRegister' => Route::has('register'),
+    //     'laravelVersion' => Application::VERSION,
+    //     'phpVersion' => PHP_VERSION,
+    // ]);
 });
 
 Route::get('/symfony', [SkillsController::class, 'symfony'])->name('symfony');
