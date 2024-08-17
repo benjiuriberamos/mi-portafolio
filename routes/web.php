@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\CarsController;
 use Inertia\Inertia;
+use App\Services\GithubService;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\CarsController;
+use App\Http\Controllers\GithubController;
 use App\Http\Controllers\SkillsController;
 use App\Services\Logistica\LogisticaService;
 use App\Services\Logistica\LogisticaMaritima;
@@ -25,7 +27,8 @@ use App\Services\FabricaMuebles\Fabrica\FabricaMuebleVictoriana;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    $github_repos = (new GithubService())->getRepos();
+    return view('pages.home', ['github_repos' => $github_repos]);
     // return view('portafolio');
     // return Inertia::render('Welcome', [
     //     'canLogin' => Route::has('login'),
@@ -39,6 +42,26 @@ Route::get('/symfony', [SkillsController::class, 'symfony'])->name('symfony');
 Route::get('/laravel', [SkillsController::class, 'laravel'])->name('laravel');
 Route::get('/node', [SkillsController::class, 'node'])->name('node');
 
+//Github controller
+Route::controller(GithubController::class)->prefix('github')->group(function () {
+    Route::get('/token', 'token');
+    Route::get('/repos', 'repos');
+});
+
+Route::get('/something', function () {
+    return Inertia::render('Pruebas/Something');
+})->name('something');
+
+Route::get('/dashboard', function () {
+    // return view('dashboard');
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource('cars', CarsController::class)->middleware(['auth', 'verified']);
+
+require __DIR__.'/auth.php';
+
+//Patrones de diseño
 Route::get('/logistica-service', function () {
     $logisticaService = new LogisticaService();
     return new JsonResponse([
@@ -69,16 +92,3 @@ Route::get('/fabrica-muebles', function () {
         ],
     ]);
 });
-
-Route::get('/something', function () {
-    return Inertia::render('Pruebas/Something');
-})->name('something');
-
-Route::get('/dashboard', function () {
-    // return view('dashboard');
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::resource('cars', CarsController::class)->middleware(['auth', 'verified']);
-
-require __DIR__.'/auth.php';

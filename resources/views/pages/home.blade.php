@@ -42,6 +42,18 @@
         </div>
     </div>
 </section>
+<section class="b5">
+    <h2>Un poco sobre mí</h2>
+    <div class="b5_content">
+        @foreach ($github_repos as $item)
+        <div class="b5_item">
+            <div class="b5_item-title"><a href="{{ $item['url'] }}" target="_blank" rel="noopener noreferrer">{{ $item['name'] }}</a></div>
+            <div class="b5_item-language">{{ $item['language'] }}</div>
+            <div class="b5_item-views">{{ $item['watchers'] }}</div>
+        </div>
+        @endforeach
+    </div>
+</section>
 <section class="b3">
     <h2 class="b3__title">Datos de contacto</h2>
     <div class="b3__content">
