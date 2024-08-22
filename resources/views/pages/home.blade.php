@@ -16,7 +16,7 @@
                 DESARROLLADOR BACKEND
             </h1>
             <div class="b1__cardrigth-text">
-                <p> Hola, me llamo Benji Uribe Ramos</p>
+                <p> Hi! My name is BENJI URIBE RAMOS.</p>
             </div>
         </div>
     </div>
@@ -42,14 +42,15 @@
         </div>
     </div>
 </section>
-<section class="b5">
-    <h2>Un poco sobre mí</h2>
-    <div class="b5_content">
+<section class="b6">
+    <h2 class="b6_title">Un poco sobre mis conocimientos</h2>
+    <div class="b6_content owl-carousel">
         @foreach ($github_repos as $item)
-        <div class="b5_item">
-            <div class="b5_item-title"><a href="{{ $item['url'] }}" target="_blank" rel="noopener noreferrer">{{ $item['name'] }}</a></div>
-            <div class="b5_item-language">{{ $item['language'] }}</div>
-            <div class="b5_item-views">{{ $item['watchers'] }}</div>
+        <div class="b6_item">
+            <div class="b6_item-title"><a href="{{ $item['url'] }}" target="_blank" rel="noopener noreferrer">{{ $item['name'] }}</a></div>
+            <div class="b6_item-language">{{ $item['language'] }}</div>
+            <div class="b6_item-views">{{ $item['watchers'] }} Vistas</div>
+            <div class="b6_item-shadow"></div>
         </div>
         @endforeach
     </div>
@@ -126,6 +127,21 @@
                 buttonSubmit.disabled = false
                 buttonSubmit.innerHTML = 'ENVIAR DATOS!'
             }, 3000);
+        });
+
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel();
+            $('.owl-carousel').owlCarousel({
+                center: true,
+                items:2,
+                loop:true,
+                margin:10,
+                responsive:{
+                    600:{
+                        items:4
+                    }
+                }
+            });
         });
     </script>
 @endsection

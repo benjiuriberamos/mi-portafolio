@@ -43,7 +43,7 @@ class GithubService
         return array_map(function($ele) {
             return [
                 'name' => $ele['name'],
-                'url' => $ele['url'],
+                'url' => $ele['html_url'],
                 'language' => $ele['language'],
                 'watchers' => $ele['watchers'],
             ];

@@ -36,7 +36,7 @@ class GithubController extends Controller
             'messaje'=>'This is your token.',
         ]);
     }
-
+    
     public function repos(Request $request)
     {
         $jwt = $request->header('Authorization', '<token>');
