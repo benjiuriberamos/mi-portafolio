@@ -1,7 +1,9 @@
 @extends('template._base')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('owlcarousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('owlcarousel/assets/owl.theme.default.min.css') }}">
 @endsection
 
 @section('content')
@@ -99,6 +101,9 @@
 @endsection
 
 @section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('owlcarousel/owl.carousel.min.js') }}"></script>
+
     <script>
         const formulario = document.querySelector('#formulario');
         const buttonSubmit = document.querySelector('#btnenviar');
@@ -130,12 +135,12 @@
         });
 
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel();
             $('.owl-carousel').owlCarousel({
                 center: true,
                 items:2,
                 loop:true,
                 margin:10,
+                nav:true,
                 responsive:{
                     600:{
                         items:4
