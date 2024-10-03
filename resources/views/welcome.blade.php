@@ -17,8 +17,8 @@
     </header>
     <section class="content">
         <div class="content-text">
-            <h1 class>BENJI URIBE RAMOS</h1>
-            <p class>Backend developer</p>
+            <h1 class="content-title">BENJI URIBE RAMOS</h1>
+            <h4 class="content-subtitle">Backend developer</h4>
         </div>
         <div class="content-capa"></div>
     </section>
