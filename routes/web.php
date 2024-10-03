@@ -28,7 +28,8 @@ use App\Services\FabricaMuebles\Fabrica\FabricaMuebleVictoriana;
 
 Route::get('/', function () {
     $github_repos = (new GithubService())->getRepos();
-    return view('pages.home', ['github_repos' => $github_repos]);
+    // return view('pages.home', ['github_repos' => $github_repos]);
+    return view('welcome', ['github_repos' => $github_repos]);
     // return view('portafolio');
     // return Inertia::render('Welcome', [
     //     'canLogin' => Route::has('login'),

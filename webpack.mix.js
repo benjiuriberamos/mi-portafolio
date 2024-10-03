@@ -13,7 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-        require('tailwindcss'), 
+        require('tailwindcss'),
         require('autoprefixer'),
     ])
     .alias({
@@ -26,6 +26,7 @@ mix
     .js('resources/js/laravel.js', 'public/js')
     .sass('public/assets/sass/home.sass', 'assets/css')
     .sass('public/assets/sass/laravel.sass', 'assets/css')
+    .sass('public/assets/sass/portafolio.sass', 'assets/css')
     .browserSync({
         proxy: 'http://127.0.0.1:8000', // Cambia esto por la URL de tu servidor de desarrollo
         files: [
