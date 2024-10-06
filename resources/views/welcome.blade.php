@@ -36,7 +36,6 @@
 
 
     <footer class="footer">
-        @benjiuriberamos / benjiuriberamos@gmail.com / +51 954 775 880
     </footer>
 
     <script  type="importmap">{
