@@ -13,7 +13,7 @@
     <style>
         canvas {
             position: absolute;
-            z-index: -1;
+            z-index: -2;
         }
         #c {
            width: 100%;
@@ -33,7 +33,7 @@
                 <h1 class="content-title">BENJI URIBE RAMOS</h1>
                 <h4 class="content-subtitle">Backend developer</h4>
             </div>
-            <div class="content-capa"></div>
+            <div class="content-capa" style="background-image: url('/assets/img/fondodev.jpeg');"></div>
         </section>
         <canvas id="c"></canvas>
     </body>
