@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/portafolio.css') }}">
     <title>Benji Uribe Ramos</title>
     <style>
+        canvas {
+            position: absolute;
+            z-index: -1;
+        }
         #c {
            width: 100%;
            height: 100%;
@@ -23,8 +27,8 @@
 <body class="body-class--dark">
     <header>
     </header>
-    <body>
-        <section class="content">
+    <body >
+        <section class="content" id="app">
             <div class="content-text">
                 <h1 class="content-title">BENJI URIBE RAMOS</h1>
                 <h4 class="content-subtitle">Backend developer</h4>
@@ -152,6 +156,25 @@
         }
 
         main();
+    </script>
+
+    <script type="module">
+        import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+        neonCursor({
+        el: document.getElementById('app'),
+        shaderPoints: 16,
+        curvePoints: 80,
+        curveLerp: 0.5,
+        radius1: 5,
+        radius2: 30,
+        velocityTreshold: 10,
+        sleepRadiusX: 100,
+        sleepRadiusY: 100,
+        sleepTimeCoefX: 0.0025,
+        sleepTimeCoefY: 0.0025
+        })
+
     </script>
 </body>
 </html>
