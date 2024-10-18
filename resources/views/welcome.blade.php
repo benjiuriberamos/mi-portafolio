@@ -34,6 +34,13 @@
                 <h4 class="content-subtitle">Backend developer</h4>
             </div>
             <div class="content-capa" style="background-image: url('/assets/img/fondodev.jpeg');"></div>
+            <div class="content-data">
+                <h3>Contact me.</h3>
+                <p>Phone: <a href="tel:+51954775880" target="_blank">+51 954775880</a></p>
+                <p>Whatsapp: <a href="tel:+51954775880" target="_blank">+51 954775880</a></p>
+                <p>Telegram: <a href="https://t.me/buinvierno" target="_blank">@burinvierno</a></p>
+                <p>Email: <a href="mailto:benjiuriberamos@gmail.com" target="_blank">benjiuriberamos@gmail.com</a></p>
+            </div>
         </section>
         <canvas id="c"></canvas>
     </body>

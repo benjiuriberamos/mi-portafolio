@@ -4,6 +4,14 @@
   box-sizing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link, :visited, :hover, :active {
+  color: #fff;
+}
+
 body {
   display: flex;
   position: relative;
@@ -82,4 +90,34 @@ body {
 .footer {
   position: absolute;
   bottom: 0;
+}
+
+.cursor {
+  border: 2px solid #00ff00;
+  background-color: rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  border-radius: 50%;
+}
+
+.content-data {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 20;
+}
+.content-data h3, .content-data p {
+  font-size: 15px;
+}
+.content-data a:link, .content-data :visited {
+  color: blue;
+}
+
+@media screen and (max-width: 426px) {
+  .content-data {
+    top: 25px;
+    left: 26px;
+  }
+  .content-data h3, .content-data p {
+    font-size: 12px;
+  }
 }
